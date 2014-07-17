@@ -1,4 +1,4 @@
-class users {
+class base::users {
     group { 'rcsbot':
             ensure          => present,
             gid   => 501,

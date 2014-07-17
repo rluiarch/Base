@@ -1,4 +1,4 @@
-class issue {
+class base::issue {
         file { '/etc/issue':
                 path    => "/etc/issue",
                 owner   => root,

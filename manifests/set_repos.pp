@@ -1,4 +1,4 @@
-class set_repos {
+class base::set_repos {
 
     yumrepo { "RCS-Custom":
       baseurl   => "http://54.193.1.156/RCS-Custom/",

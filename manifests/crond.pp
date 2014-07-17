@@ -1,4 +1,4 @@
-class crond {
+class base::crond {
     file { "/etc/cron.allow":
       owner   => root,
       group   => root,

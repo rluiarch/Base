@@ -1,4 +1,4 @@
-class sudoers_conf {
+class base::sudoers_conf {
       file { '/etc/sudoers':
               path    => '/etc/sudoers',
               owner   => root,

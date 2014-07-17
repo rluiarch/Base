@@ -1,4 +1,4 @@
-class ssh_config {
+class base::ssh_config {
     file { '/etc/ssh/sshd_config':
       path    => "/etc/ssh/sshd_config",
                   owner   => root,

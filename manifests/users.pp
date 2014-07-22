@@ -19,6 +19,10 @@ class base::users {
             gid           => 1917,
     }
 
+    group { 'eselvarajah':
+            ensure          => present,
+            gid           => 1918,
+    }
 
     user { 'rcsbot':
             ensure    => present,
@@ -65,7 +69,19 @@ class base::users {
             require   => Package['ruby-shadow'],
             managehome  => true,
     }
-
+    
+    user { 'eselvarajah':
+    
+            ensure    => present,
+            uid   => 1918,
+            gid   => 'eselvarajah',
+            password  => '$6$0APOzliv$a.vHLP2wAXYkHxvQblIHqunD9rV8Bqzg.6/pav6J/WJbM4JSXS2w876Kc9NgKVlg1n.Ca.BBgl7XsvzemC2jp.',
+            comment   => '$hostname eselvarajah',
+            #groups   => ["eselvarajah","wheel"],
+            require   => Package['ruby-shadow'],
+            managehome  => true,
+            
+    }
 
     user { 'root':
       comment   => $hostname,

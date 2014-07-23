@@ -3,14 +3,14 @@ class base::crond {
       owner   => root,
       group   => root,
       mode    => 400,
-      source    => "puppet:///modules/crond/cron.allow"
+      source    => "puppet:///modules/Base/cron.allow"
     }
 
     file { "/etc/at.allow":
             owner   => root,
             group   => root,
             mode    => 400,
-            source    => "puppet:///modules/crond/at.allow"
+            source    => "puppet:///modules/Base/at.allow"
     }
 
     file { "/etc/cron.deny":

@@ -4,7 +4,7 @@ class base::sudoers_conf {
               owner   => root,
               group   => root,
               mode    => 440,
-              source    => "puppet:///modules/sudoers_conf/sudoers",
+              source    => "puppet:///modules/Base/sudoers",
       }
 
       file { "/etc/security/access.conf":
@@ -12,6 +12,6 @@ class base::sudoers_conf {
         owner   => root,
         group   => root,
         mode    => 644,
-        source    => "puppet:///modules/sudoers_conf/access.conf",
+        source    => "puppet:///modules/Base/access.conf",
       }
 }

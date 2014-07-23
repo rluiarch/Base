@@ -4,7 +4,7 @@ class base::ssh_config {
                   owner   => root,
                   group   => root,
                   mode    => 600,
-      source    => 'puppet:///modules/sshd/sshd_config',
+      source    => 'puppet:///modules/Base/sshd_config',
     }
 
     service { 'sshd':

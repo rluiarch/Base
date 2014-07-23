@@ -4,6 +4,6 @@ class base::issue {
                 owner   => root,
                 group   => root,
                 mode    => 644,
-                source    => 'puppet:///modules/issue/issue',
+                source    => 'puppet:///modules/Base/issue',
         }
 }

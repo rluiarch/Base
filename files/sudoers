@@ -100,10 +100,9 @@ root    ALL=(ALL)       ALL
 
 ## Allows people in group wheel to run all commands
 # %wheel        ALL=(ALL)       ALL
-lakassa         ALL=(ALL)       ALL
-tslankard       ALL=(ALL)       ALL
-astarov         ALL=(ALL)       ALL
-eselvarajah	ALL=(ALL)       ALL
+rlui            ALL=(ALL)       ALL
+sshah           ALL=(ALL)       ALL
+phegde        	ALL=(ALL)       ALL
 
 ## Same thing without a password
 %wheel  ALL=(ALL)       NOPASSWD: ALL

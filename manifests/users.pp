@@ -4,25 +4,21 @@ class base::users {
             gid   => 501,
     }
 
-    group { 'lakassa':
+    group { 'rlui':
             ensure          => present,
             gid   => 1914,
     }
 
-    group { 'astarov':
+    group { 'sshah':
             ensure          => present,
             gid           => 1916,
     }
 
-    group { 'tslankard':
+    group { 'phegde':
             ensure          => present,
             gid           => 1917,
     }
 
-    group { 'eselvarajah':
-            ensure          => present,
-            gid           => 1918,
-    }
 
     user { 'rcsbot':
             ensure    => present,
@@ -36,13 +32,13 @@ class base::users {
     }
 
 
-    user { 'lakassa':
+    user { 'rlui':
             ensure    => present,
             uid   => 1914,
             gid   => 'lakassa',
-            password  => '$6$VgWrNj3Z$Oh03zODE3dA3UD6ywU2QK7CCPfy8l76V5NqTBzfgGG87Dwqs8dpIs7zkIehySv.xUmGreokqPYFMJInEZPjg2/',
-            comment   => '$hostname lakassa',
-            #groups   => ["lakassa","wheel"],
+            password  => '$1$hLRSGNAI$R..jSQC7yM4TdYT0CxxUN1',
+            comment   => '$hostname rlui',
+            #groups   => ["rlui","wheel"],
             require   => Package['ruby-shadow'],
             managehome  => true,
     }
@@ -51,10 +47,10 @@ class base::users {
     user { 'astarov':
             ensure    => present,
             uid   => 1916,
-            gid   => 'astarov',
-            password  => '$6$FYXtn1qX$2PFvRQ5l6SfNUXHz7C0xS8yCBaAnf1HaEBqMW4pV9DV6YT1acyoRhdOM8ZeMospbkLDgPTTT.058g.gGnZ32i0',
-            comment   => '$hostname astarov',
-            #groups   => ["astarov","wheel"],
+            gid   => 'sshah',
+            password  => '$1$u0dMKAVg$T6bIjn5pqe2KJcyzx6qxO0',
+            comment   => '$hostname sshah',
+            #groups   => ["sshah","wheel"],
             require   => Package['ruby-shadow'],
             managehome  => true,
     }
@@ -62,30 +58,18 @@ class base::users {
     user { 'tslankard':
             ensure    => present,
             uid   => 1917,
-            gid   => 'tslankard',
-            password  => '$6$xjLouVT6$cA1AEqOHB.hKjd3POMAlpQKVHn8g1x4balrHOupyq0i7ClgaDwItiDnlkjw9.zarPlIe708PxN8n7w/HGd.nQ.',
-            comment   => '$hostname tslankard',
+            gid   => 'phegde',
+            password  => '$1$hgAlrrT0$xYgRv0aZQc668bofs22eC1',
+            comment   => '$hostname phegde',
             #groups   => ["tslankard","wheel"],
             require   => Package['ruby-shadow'],
             managehome  => true,
     }
     
-    user { 'eselvarajah':
-    
-            ensure    => present,
-            uid   => 1918,
-            gid   => 'eselvarajah',
-            password  => '$6$0APOzliv$a.vHLP2wAXYkHxvQblIHqunD9rV8Bqzg.6/pav6J/WJbM4JSXS2w876Kc9NgKVlg1n.Ca.BBgl7XsvzemC2jp.',
-            comment   => '$hostname eselvarajah',
-            #groups   => ["eselvarajah","wheel"],
-            require   => Package['ruby-shadow'],
-            managehome  => true,
-            
-    }
 
     user { 'root':
       comment   => $hostname,
-                  password  => '$6$u.6FvccE$qkwBWHR.3sEZyGnsCUKp9I67MJx575bi1I9bBCqSbK01MjdemauffttyGeGF91TncEEWOob0OLOQAStGhc5/e/',
+                  password  => '$6$P75AltnrhB6TLqMy$FkFmTV7pi.r/ylJnJqGY1RqyjNAOu7fT7.8TJ91VM5hGQ4Rg0fLAQ2aPP4qiqCkhQ8sWN5sC4ksHtElHRAURC1',
     }
 
 

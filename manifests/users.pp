@@ -20,16 +20,6 @@ class base::users {
     }
 
 
-    user { 'rcsbot':
-            ensure    => present,
-            uid   => 501,
-            gid   => 'rcsbot',
-            password  => '$6$Z2O1Ldh6$mMRRO09/Uy6Wrl2w25zGdh.hCXJ.Ea0c5QkWgThWNaCiDZ0Magn9Uk.VF1ThCD7HbhbotJvBlkhp2dxBEddSq/',
-            comment   => '$hostname rcsbot',
-            groups    => ["rcsbot","wheel"],
-            require   => Package['ruby-shadow'],
-            managehome  => true,
-    }
 
 
     user { 'rlui':
